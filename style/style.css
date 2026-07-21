@@ -1,0 +1,145 @@
+body {
+    background-image: linear-gradient(var(--background-veil), var(--background-veil)),
+    var(--background-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #3b2a20;
+    font-family: Abhaya, Arial, sans-serif;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    background: #3b2a20;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.skip-link:focus {
+    left: 20px;
+    top: 20px;
+}
+
+*:focus-visible {
+    outline: 4px solid #b5651d;
+    outline-offset: 4px;
+}
+
+.presentation, .pain, .patisserie, .sandwiches, .contact {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: var(--yellow);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.presentation {
+    padding: 40px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.presentation p {
+    text-align: left;
+    font-size: clamp(25px,3vw,38px);
+    line-height: 1.5;
+    color: var(--text);
+}
+
+.pain, .sandwiches, .contact {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.patisserie {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+h2 {
+    font-family: Abhaya;
+    color: var(--h1);
+    font-size: 55px;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.pain-text, .patisserie-text, .sandwiches-text, .contact-text {
+    font-family: Abhaya, Arial, sans-serif;
+    color: var(--text);
+    font-size: 24px;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.sandwiches-text p, .contact-text p, .pain-text p, .patisserie-text p {
+    margin-bottom: 18px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.pain img {
+    width: 100%;
+    max-width: 170px;
+    margin-left: 70px;
+}
+
+.patisserie img {
+    width: 100%;
+    max-width: 350px;
+}
+
+.sandwiches img {
+    width: 100%;
+    max-width: 260px;
+}
+
+.contact iframe {
+    width: 100%;
+    max-width: 500px;
+    min-height: 350px;
+    border-radius: 15px;
+}
+
+@media(max-width: 900px){
+    .pain, .patisserie, .sandwiches, .contact {
+     grid-template-columns: 1fr;
+    }
+    .pain img, .patisserie img, .sandwiches img {
+        margin: auto;
+    }
+    .pain-text, .patisserie-text, .sandwiches-text, .contact-text {
+        text-align: left;
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 42px;
+    }
+}
+
+@media(max-width: 500px){
+    .presentation, .pain, .patisserie, .sandwiches, .contact {
+        width: 95%;
+        padding: 20px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+}
